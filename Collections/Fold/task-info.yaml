@@ -5,29 +5,29 @@ files:
   visible: true
   placeholders:
   - offset: 120
-    length: 6
+    length: 205
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 120
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
       val allProducts = customers.flatMap { it.getOrderedProducts() }.toSet()
           return customers.fold(allProducts, { orderedByAll, customer ->
               orderedByAll.intersect(customer.getOrderedProducts())
           })
-    selected: false
-    status: Unchecked
-  - offset: 189
-    length: 6
+  - offset: 389
+    length: 32
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 189
     initialized_from_dependency: false
-    possible_answer: orders.flatMap(Order::products)
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
+    encrypted_possible_answer: orders.flatMap(Order::products)
   text: |-
     // Return the set of products that were ordered by all customers
     fun Shop.getProductsOrderedByAll(): Set<Product> {
@@ -151,5 +151,8 @@ files:
             Tokyo to listOf(asuka)
     ).mapValues { it.value.map { name -> customers[name] } }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 10 Dec 2020 20:41:26 UTC
 record: -1

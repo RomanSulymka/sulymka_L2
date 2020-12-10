@@ -4,46 +4,46 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 193
-    length: 6
+  - offset: 195
+    length: 185
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 193
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
       return customer
                   .orders
                   .asSequence()
                   .filter(Order::isDelivered)
                   .flatMap { it.products.asSequence() }
                   .maxBy(Product::price)
-    selected: false
-    status: Unchecked
-  - offset: 393
-    length: 6
+  - offset: 573
+    length: 130
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 393
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
       return customers
                   .asSequence()
                   .flatMap(Customer::getOrderedProducts)
                   .count { it == product }
-    selected: false
-    status: Unchecked
-  - offset: 466
-    length: 6
+  - offset: 770
+    length: 45
     placeholder_text: TODO()
     initial_state:
       length: 6
       offset: 466
     initialized_from_dependency: false
-    possible_answer: orders.flatMap(Order::products).asSequence()
     selected: false
-    status: Unchecked
+    status: Solved
+    encrypted_possible_answer: orders.flatMap(Order::products).asSequence()
   text: |
     // Find the most expensive product among all the delivered products
     // ordered by the customer. Use `Order.isDelivered` flag.
@@ -175,5 +175,8 @@ files:
         override fun toString() = name
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 10 Dec 2020 20:51:00 UTC
 record: -1
