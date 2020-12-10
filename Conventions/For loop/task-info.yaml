@@ -5,13 +5,15 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 51
+    length: 516
     placeholder_text: 'class DateRange(val start: MyDate, val end: MyDate)'
     initial_state:
       length: 51
       offset: 0
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
       class DateRange(val start: MyDate, val end: MyDate) : Iterable<MyDate> {
           override fun iterator(): Iterator<MyDate> {
               return object : Iterator<MyDate> {
@@ -28,8 +30,6 @@ files:
               }
           }
       }
-    selected: false
-    status: Unchecked
   text: |-
     class DateRange(val start: MyDate, val end: MyDate)
 
@@ -98,5 +98,8 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 10 Dec 2020 20:11:45 UTC
 record: -1
