@@ -5,13 +5,15 @@ files:
   visible: true
   placeholders:
   - offset: 20
-    length: 26
+    length: 312
     placeholder_text: fun partitionTo() = TODO()
     initial_state:
       length: 26
       offset: 20
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: true
+    status: Solved
+    encrypted_possible_answer: |-
       fun <T, C : MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, predicate: (T) -> Boolean): Pair<C, C> {
           for (element in this) {
               if (predicate(element)) {
@@ -22,8 +24,6 @@ files:
           }
           return Pair(first, second)
       }
-    selected: false
-    status: Unchecked
   text: |
     import java.util.*
 
@@ -71,5 +71,8 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 10 Dec 2020 21:47:31 UTC
 record: -1
