@@ -5,20 +5,20 @@ files:
   visible: true
   placeholders:
   - offset: 26
-    length: 10
+    length: 128
     placeholder_text: /* TODO */
     initial_state:
       length: 10
       offset: 26
     initialized_from_dependency: false
-    possible_answer: |-
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
       fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {
           val map = HashMap<K, V>()
           map.build()
           return map
       }
-    selected: false
-    status: Unchecked
   text: |
     import java.util.HashMap
 
@@ -50,5 +50,8 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 10 Dec 2020 21:35:45 UTC
 record: -1
